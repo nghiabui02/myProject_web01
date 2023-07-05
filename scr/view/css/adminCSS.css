@@ -1,0 +1,37 @@
+#edit{
+    margin-top: 40px;
+    border-top: 0.5px solid;
+}
+.title {
+    margin-left: 20px;
+    padding: 20px;
+}
+h1{
+    font-size: 40px;
+}
+.input{
+    border-top: .5px solid;
+    width: 35%;
+    height: 220px;
+    padding: 50px;
+    margin: auto;
+    line-height: 50px;
+}
+button {
+    margin-left: 485px;
+    width: 10%;
+    height: 50px;
+    text-align: center;
+    border-radius: 15px;
+    background: silver;
+    color: #bee5eb;
+}
+.button {
+    width: 100%;
+    text-align: center;
+}
+.border-bottom {
+    border-bottom: 0.5px solid;
+    width: 35%;
+    margin-top: 20px;
+}
