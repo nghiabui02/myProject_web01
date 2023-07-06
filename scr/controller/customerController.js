@@ -38,7 +38,7 @@ class CustomerController {
                     CustomerService.findCustomer(urlObject.query.idEdit).then((customer)=>{
                         stringHTML = stringHTML.replace('{id}', customer.id);
                         stringHTML = stringHTML.replace('{name}', customer.name);
-                        stringHTML = stringHTML.replace('{price}', customer.price);
+                        stringHTML = stringHTML.replace('{price}', customer.);
                         stringHTML = stringHTML.replace('{quantity}', customer.quantity);
                         stringHTML = stringHTML.replace('{image}', customer.images);
                         res.write(stringHTML);

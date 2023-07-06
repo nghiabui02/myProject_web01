@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24be434b-59bd-48ff-b23b-88b0f82ecc52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scr/view/img/contactFooter.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scr/controller/customerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/scr/controller/customerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scr/view/customer/addCustomer.html" beforeDir="false" afterPath="$PROJECT_DIR$/scr/view/customer/addCustomer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scr/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scr/view/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +33,16 @@
     <setting file="file://$PROJECT_DIR$/scr/router/customerRouter.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="2RUrfUVnmB2Zj7p9EiXtL1W6igX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -58,6 +65,7 @@
       <recent name="$PROJECT_DIR$/scr/view/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scr/view/customer" />
       <recent name="$PROJECT_DIR$/scr/view/img" />
       <recent name="$PROJECT_DIR$/scr" />
       <recent name="$PROJECT_DIR$/model" />
@@ -147,11 +155,29 @@
       <workItem from="1688523867530" duration="22000" />
       <workItem from="1688525765918" duration="5691000" />
       <workItem from="1688539656753" duration="4946000" />
-      <workItem from="1688550001065" duration="345000" />
+      <workItem from="1688550001065" duration="1605000" />
+      <workItem from="1688579370030" duration="53000" />
+      <workItem from="1688608148669" duration="6070000" />
+      <workItem from="1688627163405" duration="49000" />
+      <workItem from="1688628494967" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
