@@ -25,7 +25,7 @@ class CustomerController {
         req.on('data', dataRaw =>{
             data += dataRaw
         })
-        res.on('end', ()=>{
+        req.on('end', ()=>{
             if(req.method === 'GET') {
                 fs.readFile('view/customer/addCustomer.html', 'utf-8', (err, stringHTML) => {
                     customerService.findAll().then(customer =>{
@@ -41,7 +41,7 @@ class CustomerController {
             } else {
                 data = qs.parse(data)
                 customerService.add(data).then(()=>{
-                    res.writeHead(301,{'location':'/add-customer'})
+                    res.writeHead(301,{'location':'/add_customer'})
                     res.end()
                 })
             }

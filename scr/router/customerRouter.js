@@ -1,7 +1,7 @@
 import CustomerController from "../controller/customerController.js";
 let customerRouter = {
     '/customer': CustomerController.showAll,
-    '/add-customer': CustomerController.showFormAdd,
+    '/add_customer': CustomerController.showFormAdd,
     '/editCustomer': CustomerController.showFormEdit,
     '/delete-customer':CustomerController.showFormAdd,
 }
