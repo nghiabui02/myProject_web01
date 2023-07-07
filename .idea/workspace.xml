@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24be434b-59bd-48ff-b23b-88b0f82ecc52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scr/view/img/contactFooter.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/controller/customerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/scr/controller/customerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/view/customer/addCustomer.html" beforeDir="false" afterPath="$PROJECT_DIR$/scr/view/customer/addCustomer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scr/view/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/scr" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/scr/controller/customerController.js" root0="FORCE_HIGHLIGHTING" />
@@ -159,7 +155,9 @@
       <workItem from="1688579370030" duration="53000" />
       <workItem from="1688608148669" duration="6070000" />
       <workItem from="1688627163405" duration="49000" />
-      <workItem from="1688628494967" duration="674000" />
+      <workItem from="1688628494967" duration="5161000" />
+      <workItem from="1688693072947" duration="8833000" />
+      <workItem from="1688712740035" duration="324000" />
     </task>
     <servers />
   </component>

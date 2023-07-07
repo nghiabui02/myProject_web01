@@ -21,9 +21,30 @@ class CustomerController {
             })
     }
     showFormAdd(req, res){
-        fs.readFile('view/customer/addCustomer.html', 'utf-8', (err, stringHTML) => {
-            res.write(stringHTML);
-            res.end();
+        let data = ''
+        req.on('data', dataRaw =>{
+            data += dataRaw
+        })
+        res.on('end', ()=>{
+            if(req.method === 'GET') {
+                fs.readFile('view/customer/addCustomer.html', 'utf-8', (err, stringHTML) => {
+                    customerService.findAll().then(customer =>{
+                        let str = ''
+                        for(const item of customer){
+                            str += `<option value = "${item.id}">${item.carName}</option>`
+                        }
+                        stringHTML =stringHTML.replace('{car}', str)
+                        res.write(stringHTML);
+                        res.end();
+                    })
+                })
+            } else {
+                data = qs.parse(data)
+                customerService.add(data).then(()=>{
+                    res.writeHead(301,{'location':'/add-customer'})
+                    res.end()
+                })
+            }
         })
     }
     showFormEdit(req, res){
@@ -38,7 +59,7 @@ class CustomerController {
                     CustomerService.findCustomer(urlObject.query.idEdit).then((customer)=>{
                         stringHTML = stringHTML.replace('{id}', customer.id);
                         stringHTML = stringHTML.replace('{name}', customer.name);
-                        stringHTML = stringHTML.replace('{price}', customer.);
+                        stringHTML = stringHTML.replace('{price}', customer.name);
                         stringHTML = stringHTML.replace('{quantity}', customer.quantity);
                         stringHTML = stringHTML.replace('{image}', customer.images);
                         res.write(stringHTML);
@@ -55,17 +76,29 @@ class CustomerController {
     }
 }
 function showList(req, res){
-    fs.readFile('view/customer/customer.html', 'utf-8', (err, stringHTML) => {
+    fs.readFile('view/admin/adminIndex.html', 'utf-8', (err, stringHTML) => {
         let str = '';
         CustomerService.findAll().then((Customers)=>{
+            console.log(Customers)
             for (const customer of Customers) {
-                str += `<h3>${customer.id},${customer.name},${customer.age},${customer.phoneNum}</h3>`
+                str += `<tbody>
+        <tr>
+            <th scope="row">${customer.id}</th>
+            <td>${customer.name}</td>
+            <td>${customer.mail}</td>
+            <td>${customer.phoneNum}</td>
+            <td>${customer.carName}</td>
+            <td><option></option></td>
+           
+            <td><button>Edit</button></td>
+            <td><button>Delete</button></td>
+        </tr>
+        </tbody>`
             }
             stringHTML = stringHTML.replace('{list}', str)
             res.write(stringHTML);
             res.end()
         })
-
     })
 }
 export default new CustomerController();

@@ -6,7 +6,9 @@ class CustomerService {
     }
     findAll() {
         return new Promise((resolve, reject)=>{
-            connection.getConnection().query('select * from customer', (err, customers)=>{
+            let sql = `SELECT customer.id, customer.name, mail,phoneNum, product.carName FROM myProject.customer
+                                join product on idProduct = product.id;`
+            connection.getConnection().query(sql, (err, customers)=>{
                 if (err){
                     reject(err)
                 } else {
@@ -17,13 +19,14 @@ class CustomerService {
         })
     }
     add(customer) {
-        return new Promise((resolve, reject)=>{
-            connection.getConnection().query(`INSERT INTO customer values (${customer.id}, '${customer.name}',${customer.age},${customer.phoneNum});`, (err, data)=>{
-                if (err){
+        return new Promise((resolve, reject) => {
+            let sql = `INSERT INTO customer VALUES (id, name, mail, phoneNum, carName) ('${customer.id}','${customer.name}', '${customer.mail}', '${customer.phoneNum}', '${customer.carName}');`
+            connection.getConnection().query(sql, (err, customers) => {
+                if (err) {
                     reject(err)
                 } else {
-                    console.log('Tao moi thanh cong')
-                    resolve(data)
+                    console.log(customers)
+                    resolve(customers)
                 }
             })
         })
@@ -45,7 +48,7 @@ class CustomerService {
                 `update customer 
                         set name = '${customer.name}', 
                         mail = ${customer.mail}, 
-                        phoneNum = ${customer.phoneNum}, '
+                        phoneNum = ${customer.phoneNum},
                 where id = ${customer.id}`, (err, data) =>{
                     if (err) {
                         reject(err)
