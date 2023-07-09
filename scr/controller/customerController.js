@@ -28,9 +28,9 @@ class CustomerController {
         req.on('end', ()=>{
             if(req.method === 'GET') {
                 fs.readFile('view/customer/addCustomer.html', 'utf-8', (err, stringHTML) => {
-                    customerService.findAll().then(customer =>{
+                    customerService.findAll().then(product =>{
                         let str = ''
-                        for(const item of customer){
+                        for(const item of product){
                             str += `<option value = "${item.id}">${item.carName}</option>`
                         }
                         stringHTML =stringHTML.replace('{car}', str)
